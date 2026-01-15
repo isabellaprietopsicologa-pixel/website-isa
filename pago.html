@@ -18,18 +18,18 @@
   </head>
 
   <body
-    class="font-sans antialiased bg-gradient-to-br from-teal-50 to-blue-50 min-h-screen"
+    class="font-sans antialiased bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen"
   >
     <!-- Navigation -->
     <nav class="bg-white shadow-md">
       <div class="container mx-auto px-4 py-3">
-        <div class="flex justify-between items-center">
-          <a href="index.html" class="text-2xl font-bold text-teal-600"
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+          <a href="index.html" class="text-2xl font-bold text-purple-600"
             >Isabella Prieto</a
           >
           <a
             href="index.html"
-            class="text-gray-700 hover:text-teal-600 transition"
+            class="text-gray-700 hover:text-purple-600 transition"
           >
             <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
           </a>
@@ -44,33 +44,33 @@
           <!-- Event Details -->
           <div class="bg-white rounded-lg shadow-xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-              <i class="far fa-calendar-check text-teal-600 mr-3"></i>
+              <i class="far fa-calendar-check text-purple-600 mr-3"></i>
               Detalles de tu Consulta
             </h3>
             <div id="event-details" class="space-y-4">
               <div class="flex items-start">
-                <i class="fas fa-user-md text-teal-600 mr-3 mt-1"></i>
+                <i class="fas fa-user-md text-purple-600 mr-3 mt-1"></i>
                 <div>
                   <p class="font-semibold text-gray-800">Psicóloga</p>
                   <p class="text-gray-600">Isabella Prieto</p>
                 </div>
               </div>
               <div class="flex items-start">
-                <i class="fas fa-clock text-teal-600 mr-3 mt-1"></i>
+                <i class="fas fa-clock text-purple-600 mr-3 mt-1"></i>
                 <div>
                   <p class="font-semibold text-gray-800">Duración</p>
                   <p class="text-gray-600">60 minutos</p>
                 </div>
               </div>
               <div class="flex items-start">
-                <i class="fas fa-video text-teal-600 mr-3 mt-1"></i>
+                <i class="fas fa-video text-purple-600 mr-3 mt-1"></i>
                 <div>
                   <p class="font-semibold text-gray-800">Modalidad</p>
                   <p class="text-gray-600">Sesión virtual (online)</p>
                 </div>
               </div>
               <div class="flex items-start">
-                <i class="fas fa-envelope text-teal-600 mr-3 mt-1"></i>
+                <i class="fas fa-envelope text-purple-600 mr-3 mt-1"></i>
                 <div>
                   <p class="font-semibold text-gray-800">Confirmación</p>
                   <p class="text-gray-600">
@@ -84,51 +84,50 @@
           <!-- Payment Options -->
           <div class="bg-white rounded-lg shadow-xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-              <i class="fas fa-credit-card text-teal-600 mr-3"></i>
+              <i class="fas fa-credit-card text-purple-600 mr-3"></i>
               Opciones de Pago
             </h3>
 
             <!-- Price -->
             <div
-              class="bg-gradient-to-r from-teal-600 to-blue-600 rounded-lg p-6 text-center mb-6"
+              class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 text-center mb-6"
             >
-              <p class="text-teal-100 text-lg mb-2">Precio de la Consulta</p>
+              <p class="text-purple-100 text-lg mb-2">Precio de la Consulta</p>
               <p class="text-white text-4xl font-bold">$150.000 COP</p>
-              <p class="text-teal-100 text-sm mt-2">Pago único por sesión</p>
+              <p class="text-purple-100 text-sm mt-2">Pago único por sesión</p>
             </div>
 
             <!-- Payment Methods -->
             <div class="space-y-4">
               <!-- Option 1: Stripe/PayPal/MercadoPago Button -->
-              <div
-                class="border-2 border-gray-200 rounded-lg p-6 hover:border-teal-500 transition"
+              <!-- <div
+                class="border-2 border-gray-200 rounded-lg p-6 hover:border-purple-500 transition"
               >
                 <h4 class="font-bold text-gray-800 mb-3 flex items-center">
-                  <i class="fas fa-credit-card text-teal-600 mr-2"></i>
+                  <i class="fas fa-credit-card text-purple-600 mr-2"></i>
                   Pago con Tarjeta
                 </h4>
                 <p class="text-gray-600 text-sm mb-4">
                   Acepta tarjetas de crédito y débito
                 </p>
 
-                <!-- TODO: Replace with your Stripe/PayPal/MercadoPago button -->
                 <button
                   onclick="alert('Integra aquí tu botón de pago de Stripe, PayPal, o MercadoPago')"
-                  class="w-full bg-teal-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700 transition"
+                  class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition"
                 >
                   Pagar con Tarjeta
                 </button>
-              </div>
+              </div> -->
 
               <!-- Option 2: Bank Transfer -->
               <div class="border-2 border-gray-200 rounded-lg p-6">
                 <h4 class="font-bold text-gray-800 mb-3 flex items-center">
-                  <i class="fas fa-university text-teal-600 mr-2"></i>
+                  <i class="fas fa-university text-purple-600 mr-2"></i>
                   Transferencia Bancaria
                 </h4>
                 <button
                   onclick="toggleBankDetails()"
-                  class="w-full bg-gray-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-700 transition"
+                  class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition"
                 >
                   Ver Datos Bancarios
                 </button>
@@ -137,15 +136,14 @@
                   class="hidden mt-4 bg-gray-50 rounded-lg p-4"
                 >
                   <p class="text-sm text-gray-700 space-y-2">
-                    <strong>Banco:</strong> [Tu Banco]<br />
-                    <strong>Tipo de Cuenta:</strong> [Ahorros/Corriente]<br />
-                    <strong>Número de Cuenta:</strong> [XXXX-XXXX-XXXX]<br />
+                    <strong>Banco:</strong> Bancolombia<br />
+                    <strong>Tipo de Cuenta:</strong> Ahorros<br />
+                    <strong>Número de Cuenta:</strong> 91246352432<br />
                     <strong>Titular:</strong> Isabella Prieto<br />
-                    <strong>Cédula:</strong> [XXXXXXXX]
                   </p>
                   <p class="text-xs text-gray-600 mt-3">
                     <i class="fas fa-info-circle mr-1"></i>
-                    Envía el comprobante de pago por WhatsApp: +57 310 544 1488
+                    Envía el comprobante de pago por WhatsApp: 3105441488
                   </p>
                 </div>
               </div>
@@ -153,7 +151,7 @@
               <!-- Option 3: Nequi/Daviplata -->
               <div class="border-2 border-gray-200 rounded-lg p-6">
                 <h4 class="font-bold text-gray-800 mb-3 flex items-center">
-                  <i class="fas fa-mobile-alt text-teal-600 mr-2"></i>
+                  <i class="fas fa-mobile-alt text-purple-600 mr-2"></i>
                   Nequi / Daviplata
                 </h4>
                 <button
@@ -167,8 +165,8 @@
                   class="hidden mt-4 bg-purple-50 rounded-lg p-4"
                 >
                   <p class="text-sm text-gray-700 space-y-2">
-                    <strong>Nequi:</strong> +57 310 544 1488<br />
-                    <strong>Daviplata:</strong> +57 310 544 1488<br />
+                    <strong>Nequi:</strong> 3105441488<br />
+                    <strong>Daviplata:</strong> 3105441488<br />
                     <strong>Titular:</strong> Isabella Prieto
                   </p>
                   <p class="text-xs text-gray-600 mt-3">
@@ -189,10 +187,11 @@
             <p class="text-gray-600 mb-6">
               Contáctame directamente y te ayudaré con el proceso
             </p>
+
             <a
               href="https://wa.me/573105441488?text=Hola%20Isabella,%20acabo%20de%20agendar%20una%20cita%20y%20tengo%20dudas%20sobre%20el%20pago"
               target="_blank"
-              class="inline-flex items-center bg-green-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-green-600 transition"
+              class="inline-flex items-center bg-purple-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-purple-600 transition"
             >
               <i class="fab fa-whatsapp text-2xl mr-3"></i>
               Contactar por WhatsApp
@@ -252,7 +251,7 @@
           position: "center",
           stopOnFocus: true,
           style: {
-            background: "linear-gradient(to right, #10b981, #059669)",
+            background: "linear-gradient(to right, #7c3aed, #6d28d9)",
             fontSize: "16px",
             borderRadius: "8px",
             padding: "16px 24px",
