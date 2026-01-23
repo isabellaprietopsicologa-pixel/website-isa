@@ -99,7 +99,7 @@
 
             <!-- Payment Methods -->
             <div class="space-y-4">
-              <!-- Option 1: Stripe/PayPal/MercadoPago Button -->
+              <!-- Option 1: Wompi Pago Button -->
               <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-purple-500 transition">
                 <h4 class="font-bold text-gray-800 mb-3 flex items-center">
                 <i class="fas fa-credit-card text-purple-600 mr-2"></i>
@@ -108,12 +108,12 @@
                 <p class="text-gray-600 text-sm mb-4">
                 Acepta tarjetas de crédito/débito, PSE y Nequi
                 </p>
-              <button
-              onclick="abrirPagoWompi()"
-              class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition"
-              >
-              Pagar $80.000 COP
-              </button>
+                     <a href="https://checkout.wompi.co/l/VPOS_LrXnQq"
+          target="_blank"
+          class="block w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition text-center"
+        >
+          Pagar $80.000 COP
+        </a>
         </div>
               <!-- Option 2: Bank Transfer -->
               <div class="border-2 border-gray-200 rounded-lg p-6">
@@ -267,27 +267,6 @@
       function toggleMobilePayment() {
         const mobilePayment = document.getElementById("mobile-payment");
         mobilePayment.classList.toggle("hidden");
-      }
-    </script>
-    <!-- Script de Wompi -->
-    <script src="https://checkout.wompi.co/widget.js"></script>
-    <script>
-      var checkout = new WidgetCheckout({
-        currency: 'COP',
-        amountInCents: 8000000, // $80,000 COP
-        reference: 'CONSULTA-' + Date.now(),
-        publicKey: 'pub_prod_fbPeTSLi89stxTPYENpGAh9h3sMaNtxA', // ⚠️ Clave de PRUEBA
-        redirectUrl: 'https://website-isa-umber.vercel.app/index.html'
-      });
-
-      function abrirPagoWompi() {
-        checkout.open(function(result) {
-          var transaction = result.transaction;
-          console.log('Pago realizado:', transaction.id);
-          console.log('Estado:', transaction.status);
-          
-          alert('¡Pago procesado! ID: ' + transaction.id);
-        });
       }
     </script>
   </body>
