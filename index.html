@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO básico -->
-    <title>Psicóloga Especialista en Trastornos Alimentarios | Isabella Prieto</title>
-    <meta name="description" content="Isabella Prieto, psicóloga especializada en Psicología y Psicopatología de la Nutrición. Terapia online para anorexia, bulimia y trastorno por atracón. Agenda tu consulta." />
+    <title>Psicóloga Online Especializada en Trastornos Alimentarios y Ansiedad | Isabella Prieto</title>
+    <meta name="description" content="Psicóloga online especializada en trastornos alimentarios, ansiedad y depresión. Consulta psicológica por videollamada, agenda tu cita fácilmente. Isabella Prieto." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.psicologaisabellaprieto.com/" />
 
     <!-- Open Graph / redes sociales -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Isabella Prieto - Psicóloga Especialista en Trastornos Alimentarios" />
-    <meta property="og:description" content="Terapia online especializada en anorexia, bulimia y trastorno por atracón, con acompañamiento profesional y empático." />
+    <meta property="og:title" content="Isabella Prieto - Psicóloga Online Especializada en Trastornos Alimentarios y Ansiedad" />
+    <meta property="og:description" content="Consulta psicológica online por videollamada. Terapia especializada en anorexia, bulimia, trastorno por atracón y ansiedad." />
     <meta property="og:url" content="https://www.psicologaisabellaprieto.com/" />
     <meta property="og:image" content="https://www.psicologaisabellaprieto.com/isabella-prieto.jpg" />
     <meta property="og:locale" content="es_CO" />
@@ -43,6 +43,40 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tratamiento para Anorexia Nerviosa" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tratamiento para Bulimia Nerviosa" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tratamiento para Trastorno por Atracón" } }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona una consulta psicológica por videollamada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Las sesiones se realizan por videollamada, con una duración de 45-60 minutos. Recibirás un enlace por email antes de la cita y solo necesitas conexión a internet." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo agendo una cita con la psicóloga?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Puedes agendar tu cita directamente desde el sitio web eligiendo día y hora, o escribiendo por WhatsApp." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta la terapia psicológica online?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El valor de la consulta se confirma al momento de agendar la cita; puedes escribir por WhatsApp para consultarlo antes de reservar." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La terapia online es igual de efectiva que la presencial?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, la evidencia muestra que la terapia online con enfoque cognitivo-conductual tiene resultados comparables a la terapia presencial." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atiendes ansiedad y depresión además de trastornos alimentarios?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, además de la especialización en trastornos alimentarios, se acompañan procesos de ansiedad y depresión." }
+        }
       ]
     }
     </script>
@@ -132,6 +166,12 @@
                 >¿Por Qué Elegirme?</a
               >
               <a
+                href="#preguntas-frecuentes"
+                @click="smoothScroll($event, '#preguntas-frecuentes')"
+                class="text-gray-700 hover:text-purple-600 transition"
+                >FAQ</a
+              >
+              <a
                 href="#contacto"
                 @click="smoothScroll($event, '#contacto')"
                 class="text-gray-700 hover:text-purple-600 transition"
@@ -194,12 +234,13 @@
             <div class="flex flex-col md:flex-row items-center justify-between">
               <div class="md:w-1/2 mb-8 md:mb-0">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                  Psicóloga Especialista en Trastornos Alimentarios | Terapia Online
+                  Psicóloga Online Especializada en Trastornos Alimentarios y Ansiedad
                 </h1>
                 <p class="text-xl text-gray-600 mb-6">
-                  Psicóloga especializada en Psicología y Psicopatología de la
-                  Nutrición. Te acompaño en tu proceso de recuperación de
-                  trastornos alimentarios, ansiedad y depresión.
+                  Consulta psicológica online por videollamada. Te acompaño en tu
+                  proceso de recuperación de trastornos alimentarios, ansiedad y
+                  depresión, con sesiones flexibles y un enfoque profesional y
+                  cercano. Agenda tu cita en minutos.
                 </p>
                 <button
                   @click="openCalendarModal"
@@ -933,6 +974,70 @@
           </div>
         </div>
       </div>
+
+      <!-- Section 6: Preguntas Frecuentes -->
+      <section id="preguntas-frecuentes" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+            Preguntas Frecuentes
+          </h2>
+          <div class="max-w-3xl mx-auto space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                ¿Cómo funciona una consulta psicológica por videollamada?
+              </h3>
+              <p class="text-gray-700">
+                Las sesiones se realizan por videollamada, con una duración de
+                45-60 minutos. Recibirás un enlace por email antes de la cita
+                y solo necesitas conexión a internet, sin importar la ciudad o
+                país donde estés.
+              </p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                ¿Cómo agendo una cita con la psicóloga?
+              </h3>
+              <p class="text-gray-700">
+                Puedes agendar tu cita directamente desde este sitio usando el
+                botón "Agenda tu Consulta", eligiendo el día y la hora que
+                mejor te funcione, o escribiendo por WhatsApp al +57 310 544 1488.
+              </p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                ¿Cuánto cuesta la terapia psicológica online?
+              </h3>
+              <p class="text-gray-700">
+                El valor de la consulta se confirma al momento de agendar tu
+                cita. Escríbeme por WhatsApp si quieres conocer el valor antes
+                de reservar tu sesión.
+              </p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                ¿La terapia online es igual de efectiva que la presencial?
+              </h3>
+              <p class="text-gray-700">
+                Sí. La evidencia muestra que la terapia psicológica online,
+                con un enfoque como la Terapia Cognitivo-Conductual, tiene
+                resultados comparables a la terapia presencial, además de
+                ofrecerte mayor flexibilidad de horario.
+              </p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                ¿Atiendes ansiedad y depresión además de trastornos alimentarios?
+              </h3>
+              <p class="text-gray-700">
+                Sí. Además de mi especialización en trastornos de la conducta
+                alimentaria, acompaño procesos de ansiedad y depresión con un
+                enfoque profesional y empático, adaptado a las necesidades de
+                cada paciente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Footer -->
       <footer class="bg-gray-900 text-white py-6">
