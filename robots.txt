@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /gracias
+Disallow: /pago
 
 Sitemap: https://www.psicologaisabellaprieto.com/sitemap.xml
