@@ -1,273 +1,188 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pago de Consulta - Isabella Prieto</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Toastify.js -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  </head>
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pago de tu consulta | Isabella Prieto</title>
+<link rel="icon" href="/assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',system-ui,sans-serif;color:#3a2a6e;background:#ffffff}
+a{color:#5d32bf;text-decoration:none}
+a:hover{color:#43238f}
+.btn{transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+button:focus-visible,a:focus-visible{outline:3px solid #8a4dff;outline-offset:2px}
+</style>
+</head>
+<body>
 
-  <body
-    class="font-sans antialiased bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen"
-  >
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md">
-      <div class="container mx-auto px-4 py-3">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-          <a href="index.html" class="text-2xl font-bold text-purple-600"
-            >Isabella Prieto</a
-          >
-          <a
-            href="index.html"
-            class="text-gray-700 hover:text-purple-600 transition"
-          >
-            <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
-          </a>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Payment Section -->
-    <section class="py-6">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto">
-          <!-- Event Details -->
-          <div class="bg-white rounded-lg shadow-xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-              <i class="far fa-calendar-check text-purple-600 mr-3"></i>
-              Detalles de tu Consulta
-            </h3>
-            <div id="event-details" class="space-y-4">
-              <div class="flex items-start">
-                <i class="fas fa-user-md text-purple-600 mr-3 mt-1"></i>
-                <div>
-                  <p class="font-semibold text-gray-800">Psicóloga</p>
-                  <p class="text-gray-600">Isabella Prieto</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <i class="fas fa-clock text-purple-600 mr-3 mt-1"></i>
-                <div>
-                  <p class="font-semibold text-gray-800">Duración</p>
-                  <p class="text-gray-600">60 minutos</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <i class="fas fa-video text-purple-600 mr-3 mt-1"></i>
-                <div>
-                  <p class="font-semibold text-gray-800">Modalidad</p>
-                  <p class="text-gray-600">Sesión virtual (online)</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <i class="fas fa-envelope text-purple-600 mr-3 mt-1"></i>
-                <div>
-                  <p class="font-semibold text-gray-800">Confirmación</p>
-                  <p class="text-gray-600">
-                    Recibirás el enlace de la videollamada por email
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+<div style="position:relative;overflow:hidden;width:100%;background:#ffffff;min-height:100%">
+<svg aria-hidden="true" viewBox="0 0 600 600" style="position:absolute;top:-230px;right:-190px;width:620px;height:620px">
+<path d="M421 58c71 24 150 96 148 191-2 94-72 150-114 214-42 64-92 122-170 118-79-4-102-79-150-132C88 396 20 360 24 280c4-80 74-100 130-148C210 84 300 14 421 58z" fill="#8a4dff" opacity="0.16"></path>
+</svg>
+<svg aria-hidden="true" viewBox="0 0 600 600" style="position:absolute;bottom:-260px;left:-250px;width:560px;height:560px">
+<path d="M421 58c71 24 150 96 148 191-2 94-72 150-114 214-42 64-92 122-170 118-79-4-102-79-150-132C88 396 20 360 24 280c4-80 74-100 130-148C210 84 300 14 421 58z" fill="#5d32bf" opacity="0.12"></path>
+</svg>
 
-          <!-- Payment Options -->
-          <div class="bg-white rounded-lg shadow-xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-              <i class="fas fa-credit-card text-purple-600 mr-3"></i>
-              Opciones de Pago
-            </h3>
+<!-- HEADER -->
+<header style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+<a href="/" style="display:flex;align-items:center"><img src="/assets/logo-horizontal.png" alt="Isabella Prieto Lopera, Psicóloga" style="height:46px;width:auto;display:block"></a>
+<a class="btn" href="/" style="display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:#5d32bf;border:2px solid #5d32bf;border-radius:999px;padding:10px 22px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
+Volver al inicio
+</a>
+</header>
 
-            <!-- Price -->
-            <div
-              class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 text-center mb-6"
-            >
-              <p class="text-purple-100 text-lg mb-2">Precio de la Consulta</p>
-              <p class="text-white text-4xl font-bold">$80.000 COP</p>
-              <p class="text-purple-100 text-sm mt-2">Pago único por sesión</p>
-            </div>
+<main style="position:relative;z-index:1;max-width:780px;margin:0 auto;padding:16px 24px 88px;display:flex;flex-direction:column;gap:24px">
 
-            <!-- Payment Methods -->
-            <div class="space-y-4">
-              <!-- Option 1: Wompi Pago Button -->
-              <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-purple-500 transition">
-                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
-                <i class="fas fa-credit-card text-purple-600 mr-2"></i>
-                Pago con Tarjeta (Wompi)
-                </h4>
-                <p class="text-gray-600 text-sm mb-4">
-                Acepta tarjetas de crédito/débito, PSE y Nequi
-                </p>
-                     <a href="https://checkout.wompi.co/l/mAYVc3"
-          target="_blank"
-          class="block w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition text-center"
-        >
-          Pagar $80.000 COP
-        </a>
-        </div>
-              <!-- Option 2: Bank Transfer -->
-              <div class="border-2 border-gray-200 rounded-lg p-6">
-                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
-                  <i class="fas fa-university text-purple-600 mr-2"></i>
-                  Transferencia Bancaria
-                </h4>
-                <button
-                  onclick="toggleBankDetails()"
-                  class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition"
-                >
-                  Ver Datos Bancarios
-                </button>
-                <div
-                  id="bank-details"
-                  class="hidden mt-4 bg-gray-50 rounded-lg p-4"
-                >
-                  <p class="text-sm text-gray-700 space-y-2">
-                    <strong>Banco:</strong> Bancolombia<br />
-                    <strong>Tipo de Cuenta:</strong> Ahorros<br />
-                    <strong>Número de Cuenta:</strong> 91246352432<br />
-                    <strong>Titular:</strong> Isabella Prieto<br />
-                  </p>
-                  <p class="text-xs text-gray-600 mt-3">
-                    <i class="fas fa-info-circle mr-1"></i>
-                    Envía el comprobante de pago por WhatsApp: 3105441488
-                  </p>
-                </div>
-              </div>
+<!-- CONFIRMACIÓN -->
+<section style="background:#5d32bf;color:#ffffff;border-radius:32px;padding:36px;position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;gap:20px 24px">
+<svg aria-hidden="true" viewBox="0 0 600 600" style="position:absolute;right:-150px;top:-260px;width:440px;height:440px">
+<path d="M421 58c71 24 150 96 148 191-2 94-72 150-114 214-42 64-92 122-170 118-79-4-102-79-150-132C88 396 20 360 24 280c4-80 74-100 130-148C210 84 300 14 421 58z" fill="#8a4dff" opacity="0.45"></path>
+</svg>
+<span style="position:relative;flex:none;width:64px;height:64px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+</span>
+<div style="position:relative;flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:6px">
+<h1 style="margin:0;font-size:clamp(24px,3.4vw,32px);line-height:1.15;font-weight:700;text-wrap:balance">¡Consulta agendada con éxito!</h1>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#efe8ff;text-wrap:pretty">Reservaste tu cita con Isabella Prieto. Para confirmarla, completa el pago.</p>
+</div>
+</section>
 
-              <!-- Option 3: Nequi/Daviplata -->
-              <div class="border-2 border-gray-200 rounded-lg p-6">
-                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
-                  <i class="fas fa-mobile-alt text-purple-600 mr-2"></i>
-                  Nequi / Daviplata
-                </h4>
-                <button
-                  onclick="toggleMobilePayment()"
-                  class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition"
-                >
-                  Ver Información
-                </button>
-                <div
-                  id="mobile-payment"
-                  class="hidden mt-4 bg-purple-50 rounded-lg p-4"
-                >
-                  <p class="text-sm text-gray-700 space-y-2">
-                    <strong>Nequi:</strong> 3105441488<br />
-                    <strong>Daviplata:</strong> 3105441488<br />
-                    <strong>Titular:</strong> Isabella Prieto
-                  </p>
-                  <p class="text-xs text-gray-600 mt-3">
-                    <i class="fas fa-info-circle mr-1"></i>
-                    Envía el comprobante de pago por WhatsApp después de
-                    transferir
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- DETALLES -->
+<section style="background:#f6f2ff;border-radius:32px;padding:36px;display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font-size:24px;font-weight:700;color:#5d32bf">Detalles de tu consulta</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px">
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="flex:none;width:44px;height:44px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg></span>
+<div><p style="margin:0;font-weight:600;color:#5d32bf">Psicóloga</p><p style="margin:2px 0 0;font-size:16px">Isabella Prieto</p></div>
+</div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="flex:none;width:44px;height:44px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+<div><p style="margin:0;font-weight:600;color:#5d32bf">Duración</p><p style="margin:2px 0 0;font-size:16px">60 minutos</p></div>
+</div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="flex:none;width:44px;height:44px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"></rect><path d="M16 10l6-3v10l-6-3"></path></svg></span>
+<div><p style="margin:0;font-weight:600;color:#5d32bf">Modalidad</p><p style="margin:2px 0 0;font-size:16px">Sesión virtual (online)</p></div>
+</div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="flex:none;width:44px;height:44px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
+<div><p style="margin:0;font-weight:600;color:#5d32bf">Confirmación</p><p style="margin:2px 0 0;font-size:16px;line-height:1.5">Recibirás el enlace de la videollamada por email</p></div>
+</div>
+</div>
+</section>
 
-          <!-- WhatsApp Contact -->
-          <div class="bg-white rounded-lg shadow-xl p-8 text-center">
-            <h3 class="text-xl font-bold text-gray-800 mb-4">
-              ¿Tienes dudas sobre el pago?
-            </h3>
-            <p class="text-gray-600 mb-6">
-              Contáctame directamente y te ayudaré con el proceso
-            </p>
+<!-- PRECIO Y OPCIONES -->
+<section style="display:flex;flex-direction:column;gap:20px">
+<h2 style="margin:12px 0 0;font-size:clamp(26px,3.4vw,34px);line-height:1.15;font-weight:700;color:#5d32bf">Opciones de pago</h2>
 
-            <a
-              href="https://wa.me/573105441488?text=Hola%20Isabella,%20acabo%20de%20agendar%20una%20cita%20y%20tengo%20dudas%20sobre%20el%20pago"
-              target="_blank"
-              class="inline-flex items-center bg-purple-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-purple-600 transition"
-            >
-              <i class="fab fa-whatsapp text-2xl mr-3"></i>
-              Contactar por WhatsApp
-            </a>
-          </div>
+<div style="background:#ffffff;border:2px solid #d9c9ff;border-radius:32px;padding:32px;text-align:center;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6d3fe0">Precio de la consulta</span>
+<strong style="font-size:clamp(40px,6vw,56px);line-height:1.1;font-weight:800;color:#5d32bf">$80.000 COP</strong>
+<span style="font-size:15px;color:#5b4a8f">Pago único por sesión</span>
+</div>
 
-          <!-- Important Info -->
-          <div
-            class="mt-8 bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6"
-          >
-            <h4 class="font-bold text-blue-800 mb-2 flex items-center">
-              <i class="fas fa-info-circle mr-2"></i>
-              Información Importante
-            </h4>
-            <ul class="text-sm text-blue-700 space-y-1">
-              <li>• Tu cita quedará confirmada una vez se verifique el pago</li>
-              <li>
-                • Recibirás el enlace de la videollamada por email 24 horas
-                antes
-              </li>
-              <li>• Política de cancelación: con 24 horas de anticipación</li>
-              <li>• Si tienes alguna duda, contáctame por WhatsApp</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Wompi -->
+<div style="background:#f6f2ff;border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:16px">
+<h3 style="margin:0;font-size:20px;font-weight:700;color:#5d32bf;display:flex;align-items:center;gap:10px">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>
+Pago con tarjeta (Wompi)
+</h3>
+<p style="margin:0;font-size:16px;line-height:1.6">Acepta tarjetas de crédito y débito, PSE y Nequi.</p>
+<a class="btn" href="https://checkout.wompi.co/l/mAYVc3" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;background:#5d32bf;color:#ffffff;font-weight:700;font-size:18px;padding:17px 28px;border-radius:999px">Pagar $80.000 COP</a>
+</div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6 mt-12">
-      <div class="container mx-auto px-4 text-center">
-        <p class="mb-2">
-          &copy; 2025 Isabella Prieto - Psicóloga Especialista en Trastornos
-          Alimentarios
-        </p>
-        <p class="text-gray-400 text-sm">Todos los derechos reservados</p>
-      </div>
-    </footer>
+<!-- Transferencia -->
+<div style="background:#f6f2ff;border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:16px">
+<h3 style="margin:0;font-size:20px;font-weight:700;color:#5d32bf;display:flex;align-items:center;gap:10px">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"></path></svg>
+Transferencia bancaria
+</h3>
+<button type="button" id="bankBtn" aria-expanded="false" style="cursor:pointer;min-height:44px;background:#ffffff;color:#5d32bf;border:2px solid #5d32bf;font:600 16px 'Poppins',sans-serif;padding:13px 24px;border-radius:999px">Ver datos bancarios</button>
+<div id="bankWrap" style="display:none">
+<div data-toggle="bank" style="background:#ffffff;border-radius:20px;padding:22px 24px;display:flex;flex-direction:column;gap:12px">
+<dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:16px;line-height:1.5">
+<dt style="font-weight:600;color:#5d32bf">Banco</dt><dd style="margin:0">Bancolombia</dd>
+<dt style="font-weight:600;color:#5d32bf">Tipo de cuenta</dt><dd style="margin:0">Ahorros</dd>
+<dt style="font-weight:600;color:#5d32bf">Número de cuenta</dt><dd style="margin:0;font-weight:600">91246352432</dd>
+<dt style="font-weight:600;color:#5d32bf">Titular</dt><dd style="margin:0">Isabella Prieto</dd>
+</dl>
+<p style="margin:0;font-size:14px;line-height:1.55;color:#5b4a8f">Envía el comprobante de pago por WhatsApp: 3105441488</p>
+</div>
+</div>
+</div>
 
-    <script>
-      // Get event details from URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const eventUri = urlParams.get("event");
+<!-- Nequi / Daviplata -->
+<div style="background:#f6f2ff;border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:16px">
+<h3 style="margin:0;font-size:20px;font-weight:700;color:#5d32bf;display:flex;align-items:center;gap:10px">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg>
+Nequi / Daviplata
+</h3>
+<button type="button" id="mobileBtn" aria-expanded="false" style="cursor:pointer;min-height:44px;background:#ffffff;color:#5d32bf;border:2px solid #5d32bf;font:600 16px 'Poppins',sans-serif;padding:13px 24px;border-radius:999px">Ver información</button>
+<div id="mobileWrap" style="display:none">
+<div data-toggle="mobile" style="background:#ffffff;border-radius:20px;padding:22px 24px;display:flex;flex-direction:column;gap:12px">
+<dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:16px;line-height:1.5">
+<dt style="font-weight:600;color:#5d32bf">Nequi</dt><dd style="margin:0;font-weight:600">3105441488</dd>
+<dt style="font-weight:600;color:#5d32bf">Daviplata</dt><dd style="margin:0;font-weight:600">3105441488</dd>
+<dt style="font-weight:600;color:#5d32bf">Titular</dt><dd style="margin:0">Isabella Prieto</dd>
+</dl>
+<p style="margin:0;font-size:14px;line-height:1.55;color:#5b4a8f">Envía el comprobante de pago por WhatsApp después de transferir.</p>
+</div>
+</div>
+</div>
+</section>
 
-      if (eventUri) {
-        console.log("Event URI:", eventUri);
-        // You can use this to fetch more details or display them
-      }
+<!-- WHATSAPP -->
+<section style="background:#5d32bf;color:#ffffff;border-radius:32px;padding:36px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px">
+<h2 style="margin:0;font-size:24px;font-weight:700">¿Tienes dudas sobre el pago?</h2>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#efe8ff;max-width:460px">Contáctame directamente y te ayudaré con el proceso.</p>
+<a class="btn" href="https://wa.me/573105441488?text=Hola%20Isabella,%20acabo%20de%20agendar%20una%20cita%20y%20tengo%20dudas%20sobre%20el%20pago" target="_blank" rel="noopener" style="margin-top:8px;display:inline-flex;align-items:center;gap:10px;background:#ffffff;color:#5d32bf;font-weight:700;font-size:17px;padding:15px 30px;border-radius:999px">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d32bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+Contactar por WhatsApp
+</a>
+</section>
 
-      // Show success toast on page load
-      window.addEventListener("DOMContentLoaded", function () {
-        Toastify({
-          text: "✅ ¡Consulta Agendada Exitosamente! Has reservado tu cita con Isabella Prieto. Para confirmar tu consulta, por favor completa el pago.",
-          duration: 8000,
-          close: true,
-          gravity: "top",
-          position: "center",
-          stopOnFocus: true,
-          style: {
-            background: "linear-gradient(to right, #7c3aed, #6d28d9)",
-            fontSize: "16px",
-            borderRadius: "8px",
-            padding: "16px 24px",
-            boxShadow:
-              "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-            maxWidth: "600px",
-            textAlign: "center",
-          },
-        }).showToast();
-      });
+<!-- INFO IMPORTANTE -->
+<section style="background:#efe8ff;border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font-size:20px;font-weight:700;color:#5d32bf">Información importante</h2>
+<ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.55">
+<li>Tu cita quedará confirmada una vez se verifique el pago.</li>
+<li>Recibirás el enlace de la videollamada por email 24 horas antes.</li>
+<li>Política de cancelación: con 24 horas de anticipación.</li>
+<li>Si tienes alguna duda, contáctame por WhatsApp.</li>
+</ul>
+</section>
+</main>
 
-      function toggleBankDetails() {
-        const bankDetails = document.getElementById("bank-details");
-        bankDetails.classList.toggle("hidden");
-      }
+<footer style="position:relative;z-index:1;background:#43238f;color:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:32px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<span style="font-size:14px;color:#e5dbff">© 2026 Isabella Prieto · Psicóloga Especialista en Trastornos Alimentarios</span>
+<span style="display:flex;gap:20px;font-size:14px;font-weight:600">
+<a href="https://www.instagram.com/isabellaprietopsic" style="color:#ffffff">Instagram</a>
+<a href="https://www.facebook.com/isabellaprietopsic" style="color:#ffffff">Facebook</a>
+<a href="https://wa.me/573105441488" style="color:#ffffff">WhatsApp</a>
+</span>
+</div>
+</footer>
+</div>
 
-      function toggleMobilePayment() {
-        const mobilePayment = document.getElementById("mobile-payment");
-        mobilePayment.classList.toggle("hidden");
-      }
-    </script>
-  </body>
+<script>
+(function(){
+  function wire(btnId, wrapId, openText, closeText){
+    var b=document.getElementById(btnId), w=document.getElementById(wrapId);
+    b.addEventListener('click',function(){
+      var open=w.style.display==='none';
+      w.style.display=open?'block':'none';
+      b.setAttribute('aria-expanded',open); b.textContent=open?closeText:openText;
+    });
+  }
+  wire('bankBtn','bankWrap','Ver datos bancarios','Ocultar datos bancarios');
+  wire('mobileBtn','mobileWrap','Ver información','Ocultar información');
+})();
+</script>
+</body>
 </html>
